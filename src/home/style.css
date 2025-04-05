@@ -1,0 +1,136 @@
+/* Apply universal box sizing */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, #f0f4f8, #dbeafe);
+    min-height: 100vh;
+  }
+  
+  /* Main game container */
+  .game {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+  }
+  
+  /* Game board styles */
+  .game-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Game info (move list) */
+  .game-info {
+    min-width: 180px;
+  }
+  
+  /* Game status text */
+  .status {
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1e3a8a;
+  }
+  
+  /* Layout for each row of the board */
+  .board-row {
+    display: flex;
+  }
+  
+  /* Square styles */
+  .square {
+    background: #fff;
+    border: 2px solid #ccc;
+    font-size: 32px;
+    font-weight: bold;
+    height: 80px;
+    width: 80px;
+    margin: 3px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  .square:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.03);
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  /* Move history list */
+  ol {
+    padding-left: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
+  
+  /* Move buttons */
+  li button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in-out;
+    width: 100%;
+    text-align: left;
+  }
+  
+  li button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* X and O colors */
+  .square.X {
+    color: #1e40af;
+  }
+  
+  .square.O {
+    color: #dc2626;
+  }
+  
+  /* Responsive layout */
+  @media (max-width: 600px) {
+    .game {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      border-radius: 16px;
+    }
+  
+    .game-info {
+      width: 100%;
+      text-align: center;
+    }
+  
+    li button {
+      width: auto;
+    }
+  }
+  

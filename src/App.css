@@ -7,17 +7,23 @@
 
 .logo {
   height: 6em;
+  width: auto; /* Maintain aspect ratio */
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
+/* Change logo hover effect */
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
+/* Specific hover effect for React logo */
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* If you want to change the animation or use a spinning logo */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
